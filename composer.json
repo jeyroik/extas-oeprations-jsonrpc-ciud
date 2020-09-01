@@ -1,0 +1,10 @@
+{
+  "name": "jeyroik/extas-operations-jsonrpc-ciud",
+  "description": "Meta package with create, index, update and delete methods for JSON RPC",
+  "require": {
+    "jeyroik/extas-operations-jsonrpc-create": "0.*",
+    "jeyroik/extas-operations-jsonrpc-index": "0.*",
+    "jeyroik/extas-operations-jsonrpc-update": "0.*",
+    "jeyroik/extas-operations-jsonrpc-delete": "0.*"
+  }
+}
