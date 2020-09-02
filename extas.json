@@ -1,0 +1,11 @@
+{
+  "name": "extas/operations-jsonrpc-ciud",
+  "plugins": [
+    {
+      "class": "extas\\components\\plugins\\jsonrpc\\DetailedDynamicPluginsPrepared",
+      "stage": "extas.dynamic.plugins.prepared",
+      "install_on": "install",
+      "priority": 0
+    }
+  ]
+}
