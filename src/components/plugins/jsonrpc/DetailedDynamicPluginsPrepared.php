@@ -50,17 +50,17 @@ class DetailedDynamicPluginsPrepared extends Plugin implements IStageDynamicPlug
             ->setProperties($props['items'] ?? []);
 
         $request = $specs->getRequest();
-        $request
-            ->addProperty(new SpecsProperty([
+
+        $request->hasProperty('limit') || $request->addProperty(new SpecsProperty([
                 SpecsProperty::FIELD__NAME => 'limit',
                 SpecsProperty::FIELD__TYPE => 'int'
-            ]))
-            ->addProperty(new SpecsProperty([
+            ]));
+        $request->hasProperty('offset') || $request->addProperty(new SpecsProperty([
                 SpecsProperty::FIELD__NAME => 'offset',
                 SpecsProperty::FIELD__TYPE => 'int'
-            ]))
-            ->addProperty($sort)
-            ->addProperty($filter);
+            ]));
+        $request->hasProperty('sort') || $request->addProperty($sort);
+        $request->hasProperty('filter') || $request->addProperty($filter);
 
         $specs->setRequest($request);
 
